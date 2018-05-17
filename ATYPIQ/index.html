@@ -32,9 +32,14 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
     ======================================================= -->
-  </head>
+    <style type="text/css">
+    	.invisible {
+    		diplay: none;
+    	}
+    </style>
+</head>
 
-  <body>
+<body>
 
   <!--==========================
     Header
@@ -54,6 +59,13 @@
     				<li><a href="#contact">Contact</a></li>
     			</ul>
     		</nav><!-- #nav-menu-container -->
+
+    		<div>
+    			<select>
+    				<option value="fr">fr</option>
+    				<option value="nl">nl</option>
+    			</select>
+    		</div>
     	</div>
     </header><!-- #header -->
 
@@ -100,24 +112,28 @@
       			<h3 class="section-title">Bienvenue à l'atelier Atypiq</h3>
       			<span class="section-divider"></span>
       			<p class="section-description">
-      				Garnisseur depuis plus de 15 ans et spécialisée en mobilier années 60,<br> Chantal De Craene rénove voltaires et autres bergères dans son atelier à la rue des Jésuites. <br>
-      				Qu'il s'agisse de donner un look moderne à votre fauteuil favori ou d'offrir une nouvelle vie au canapé familial,<br>l'atelier Atypiq est à votre écoute et vous garantit la meilleure restauration pour votre mobilier. 
-      			</p>
-      		</div>
+      				<span class="lang" data-lang="fr"> Garnisseur depuis plus de 15 ans et spécialisée en mobilier années 60,<br> Chantal De Craene rénove voltaires et autres bergères dans son atelier à la rue des Jésuites. <br>
+      					Qu'il s'agisse de donner un look moderne à votre fauteuil favori ou d'offrir une nouvelle vie au canapé familial,<br>l'atelier Atypiq est à votre écoute et vous garantit la meilleure restauration pour votre mobilier.
+      				</span>
+  					<span class="lang" data-lang="nl"> Garnisseur sinds meer dan 15 jaren en gespecialiseerd in jaren 60 mobilier,<br> Chantal De Craene renoveert voltaires en bergères in haar atelier in Rue des Jésuites, Doornik. <br>
+  						Qu'il s'agisse de donner un look moderne à votre fauteuil favori ou d'offrir une nouvelle vie au canapé familial,<br>l'atelier Atypiq est à votre écoute et vous garantit la meilleure restauration pour votre mobilier.
+  					</span>
+      					</p>
+      				</div>
 
-      		<div class="row">
-      			<div class="col-lg-6 about-img wow fadeInLeft">
-      				<img src="img/about-img.jpg" alt="">
+      				<div class="row">
+      					<div class="col-lg-6 about-img wow fadeInLeft">
+      						<img src="img/about-img.jpg" alt="">
+      					</div>
+      				</div>
+
       			</div>
-      		</div>
+      		</section><!-- #about -->
+
+
 
       	</div>
-      </section><!-- #about -->
-
-
-
-    </div>
-  </section><!-- #team -->
+      </section><!-- #team -->
 
     <!--==========================
       Gallery Section
@@ -293,7 +309,7 @@
       	</div>
       </section><!-- #contact -->
 
-    </main>
+  </main>
 
   <!--==========================
     Footer
@@ -325,6 +341,20 @@
 
     	<!-- Template Main Javascript File -->
     	<script src="js/main.js"></script>
+    	<script type="text/javascript">
+    		function changeLanguage(language) {
+    			$('lang').each(function(){
+    				var elem = $(this)
+    				if (langElem.dataset.lang === language) {
+    					elem.removeClass('invisible')
+    				} else {
+    					elem.addClass('invisible')
+    				}
+
+    			})
+    		}
+    		changeLanguage('fr')
+    	</script>
 
     </body>
     </html>
